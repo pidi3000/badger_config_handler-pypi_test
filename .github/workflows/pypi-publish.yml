@@ -16,8 +16,8 @@ on:
 #     tags:
 #       - '*'
       
-# permissions:
-#   contents: read
+permissions:
+  contents: read
 
 jobs:
   build:
