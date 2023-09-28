@@ -49,17 +49,17 @@ jobs:
 
     name: upload release to PyPI
     runs-on: ubuntu-latest
-    # permissions:
-    #   # IMPORTANT: this permission is mandatory for trusted publishing
-    #   id-token: write
+    permissions:
+      # IMPORTANT: this permission is mandatory for trusted publishing
+      id-token: write
     steps:
       - uses: actions/download-artifact@v3
 
       - name: Publish package distributions to PyPI
         uses: pypa/gh-action-pypi-publish@release/v1
         with:
-          packages_dir: artifact/
-          username: __token__
-          password: ${{ secrets.PYPI_TOKEN }}
+          packages-dir: artifact/
+          # username: __token__
+          # password: ${{ secrets.PYPI_TOKEN }}
 
           
